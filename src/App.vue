@@ -1,9 +1,13 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <v-app class="safe-area">
+      <nav-drawer/>
+      <router-view/>
+    </v-app>
   </ion-app>
 </template>
 
 <script setup lang="ts">
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
+import { IonApp } from '@ionic/vue'
+import NavDrawer from '@/components/NavDrawer.vue'
 </script>
